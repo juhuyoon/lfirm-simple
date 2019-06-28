@@ -5,14 +5,19 @@
 		<meta charset="UTF-8">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="/assets/css/reset.css">
+		<link type="text/css" rel="stylesheet" href="/assets/css/materialize.min.css"  media="screen,projection"/>
 		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
 	<body>
 		{{{ body }}}
 
 		{{!-- Add in jQuery --}}
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
+			<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
 				crossorigin="anonymous"></script>		
-<script src='/public/assets/js/app.js'></script>
+		<!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+			<script src='/public/assets/js/app.js'></script>
 	</body>
 </HTML>

@@ -1,7 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 // bring in the models
-const db = require('./models/Comments');
+const db = require('./models/');
 const routes = require('./controllers/');
 
 const app = express();
@@ -22,8 +22,6 @@ app.use(routes);
 
 // listen on port 3000
 const PORT = process.env.PORT || 3000;
-db.sequelize.sync().then(() => {
-  app.listen(PORT, () => {
-    console.log(`App listening on PORT ${PORT}`);
-  });
+app.listen(PORT, () => {
+  console.log(`App listening on PORT ${PORT}`);
 });

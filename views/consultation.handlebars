@@ -7,7 +7,7 @@
         <li><a class='white-text' href="/seoul">율현 서울사무소</a></li>
         <li><a class='white-text' href="/atlanta">율현 아틀란타 사무소</a></li>
       </ul>
-            <!-- Dropdown Structure -->
+      <!-- Dropdown Structure -->
       <ul id="dropdown2" class="dropdown-content #757575 grey darken-1">
         <li><a class='white-text' href="/intro">Intro</a></li>
         <li><a class='white-text' href="/contract">Contract</a></li>
@@ -39,24 +39,50 @@
 
 {{!-- Main body Content Wrapped in Carousel --}}
 <main>
-  <div class='full-slider'>
-    <div class='carousel carousel-slider'  data-indictaors='true'>
-      <a href='#imgOne' class='carousel-item'><img src='/assets/images/Background/panel_one.jpg'></a>
-        <div class='carousel-fixed-item center textLand'>
-            <p class='white-text'>해결하여야 할 법적 문제가 한국에서 발생한 것인가요?
-            <br></br>
-            법무법인 율현 미주 지점은 미국에 계신 한국동포들을 위하여 한국법 자문과 소송을 전문으로 하는 법률사무소입니다.
-            <br></br> 
-            다양한 경험과 탁월한 능력을 갖춘 율현의 변호사가 고민하고 계신 문제를 빠르고 정확하게 해결해드리겠습니다.</h2>
+  <br><br><br><br>
+  <div class="container">
+    <div class="row">
+        <div class="col m10 offset-m1 s12">
+            <h2 class="center-align">For Consultation</h2>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="mdi-content-mail prefix"></i>
+                            <input id="email" type="email" class="validate" required>
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="message" class="materialize-textarea"></textarea>
+                          <label for="message">Message</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m12">
+                         <p class="right-align"><button class="btn btn-large waves-effect waves-light" type="button" name="action">Send Message</button></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-      <a href='#imgTwo' class='carousel-item'><img src='/assets/images/Background/nature_one.jpg'></a>
-      <a href='#imgThree' class='carousel-item'><img src='/assets/images/Background/nature_three.jpg'></a>
     </div>
-  </div>
+</div>
 </main>
 
 {{!-- Footer --}}
-<footer class="page-footer #eceff1 blue-grey lighten-5">
+<footer class="page-footer #757575 grey darken-1">
   <div class="container">
     <div class="row">
       <div class="col s5">
@@ -64,6 +90,7 @@
       </div>
       <div class="col s5">
         <h5 class="white-text"><a class="grey-text" href="#!">Contact</a></h5>
+
       </div>
       <div class="col s2">
         <h5 class="white-text"><a class="grey-text" href="#!">Resources</a></h5>

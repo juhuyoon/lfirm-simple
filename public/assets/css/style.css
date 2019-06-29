@@ -64,6 +64,25 @@ main {
   width: 100%;
   height:100%;
 }
+
+.overhead-image-contract {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height:400px;
+}
+
+.profile-image {
+  margin-top: -30%;
+  width: 130%;
+  height: 130%;
+}
+
+.profile-image2 {
+  width: 100%;
+  height: 100%;
+}
     
 /* Main Content Text */
 
@@ -73,6 +92,13 @@ main {
 }
 
 .main-text {
+  font-size: 1.3em;
+  line-height: 2em;
+  margin-bottom: 2em;
+}
+
+.resume-text {
+  font-size: 1.1em;
   line-height: 2em;
   margin-bottom: 2em;
 }

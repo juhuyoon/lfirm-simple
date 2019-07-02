@@ -15,7 +15,7 @@ router.get('/consultation', (req, res) => {
 router.get('/about', (req, res) => {
   res.render('about');
 });
-
+/* <!===================================> */
 // For offices
 router.get('/seoul', (req, res) => {
   res.render('office/seoul');
@@ -25,6 +25,7 @@ router.get('/atlanta', (req, res) => {
   res.render('office/atlanta');
 });
 
+/* <!===================================> */
 // For legal help
 
 router.get('/intro', (req, res) => {
@@ -49,6 +50,12 @@ router.get('/inheritance', (req, res) => {
 
 router.get('/taxes', (req, res) => {
   res.render('legal/taxes');
+});
+
+/* <!===================================> */
+// For resources
+router.get('/resources', (req, res) => {
+  res.render('resources/resources');
 });
 
 

@@ -1,4 +1,6 @@
-/* Navbar Properties */
+/* 
+* === NAVBAR PROPERTIES ===
+*/
 .navbar-fixed{
   position: fixed;
   top: 0;
@@ -23,13 +25,13 @@ nav ul li a{
 }
 .navbar-right{
   position: fixed;
-  right: 5px;/*pixels away from the right of the navbar*/
+  right: 5px; /*pixels away from the right of the navbar*/
 }
 .title{
   display: inline-block;
 }
 
-/* Carousel-items */
+/* --- Carousel-items --- */
 .carousel-item>img {
   width: 100%;
   height:100%;
@@ -44,7 +46,9 @@ nav ul li a{
   sans-serif;
 }
 
-/* Sticky Footer Setup */
+/* 
+* === STICKY FOOTER SETUP ===
+*/
 body {
   display: flex;
   min-height: 100vh;
@@ -56,7 +60,9 @@ main {
   flex: 1 0 auto;
 }
 
-/* Images */
+/*
+* === IMAGES FOR ALL PAGES  ===
+*/
 .overhead-image {
   position: relative;
   margin-top: 3%;
@@ -92,7 +98,9 @@ main {
   height: 100%;
 }
     
-/* Main Content Text */
+/* 
+* === MAIN CONTENT TEXT === 
+*/
 
 .main-content {
   max-width: 85%;
@@ -111,7 +119,9 @@ main {
   margin-bottom: 2em;
 }
 
-/* resources css */
+/* 
+* === RESOURCES PAGES === 
+*/
 .card {
   width: 100%;
 }
@@ -120,7 +130,9 @@ main {
   width: 100%;
 }
 
-/* Style the button that is used to open and close the collapsible content */
+/* 
+* -- Style the button that is used to open and close the collapsible content --
+*/
 .collapsible {
   background-color: #eee;
   color: #444;
@@ -133,12 +145,16 @@ main {
   font-size: 15px;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* 
+* -- Add a background color to the button -- 
+*/
 .active, .collapsible:hover {
-  background-color: #ccc;
+  background-color: rgb(145, 155, 164);
 }
 
-/* Style the collapsible content. Note: hidden by default */
+/* 
+* -- Style the collapsible content. Note: hidden by default --
+*/
 .resources-content {
   padding: 0 18px;
   background-color: white;
@@ -147,3 +163,15 @@ main {
   transition: max-height 0.2s ease-out;
 }
 
+/* 
+* -- Resources Paragraph Content -- 
+*/
+.resources-p {
+  padding: 0.5em;
+  line-height: 1.6;
+}
+
+.resources-tab {
+  padding-left: 1.5em;
+  line-height: 1.6
+}

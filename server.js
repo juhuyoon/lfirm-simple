@@ -1,9 +1,15 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const cors = require('cors');
+const nodemailer = require('nodemailer');
+const AWS = require('aws-sdk');
+
+require('dotenv').config();
+
 // bring in the models
 const db = require('./models/');
 const routes = require('./controllers/');
+
 
 const app = express();
 const allowedOrigins = ['http://localhost:3000'];
@@ -39,6 +45,31 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 app.use(routes);
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: '',
+    pass: ''
+    // user: process.env.emailUser,
+    // pass: process.env.emailPW
+  }
+});
+
+const mailOptions = {
+  from: process.env.emailUser,
+  to: '',
+  subject: 'Testing to receive',
+  html: '<p>Some text here </p>'
+};
+
+transporter.sendMail(mailOptions, (err, res) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(res);
+  }
+});
 
 // listen on port 3000
 const PORT = process.env.PORT || 3000;

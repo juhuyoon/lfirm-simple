@@ -46,33 +46,33 @@ app.set('view engine', 'handlebars');
 
 app.use(routes);
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: '',
-    pass: ''
-    // user: process.env.emailUser,
-    // pass: process.env.emailPW
-  }
-});
+// const transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: '',
+//     pass: ''
+//     // user: process.env.emailUser,
+//     // pass: process.env.emailPW
+//   }
+// });
 
-const mailOptions = {
-  from: process.env.emailUser,
-  to: '',
-  subject: 'Testing to receive',
-  html: '<p>Some text here </p>'
-};
+// const mailOptions = {
+//   from: process.env.emailUser,
+//   to: '',
+//   subject: 'Testing to receive',
+//   html: '<p>Some text here </p>'
+// };
 
-transporter.sendMail(mailOptions, (err, res) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(res);
-  }
-});
+// transporter.sendMail(mailOptions, (err, res) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(res);
+//   }
+// });
 
 // listen on port 3000
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`App listening on PORT ${PORT}`);
 });

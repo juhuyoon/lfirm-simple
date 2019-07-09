@@ -154,19 +154,8 @@ main {
 /* 
 * -- Add a background color to the button -- 
 */
-.active, .collapsible:hover {
+.collapsible:hover {
   background-color: rgb(145, 155, 164);
-}
-
-/* 
-* -- Style the collapsible content. Note: hidden by default --
-*/
-.resources-content {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
 }
 
 /* 

@@ -36,6 +36,14 @@ nav ul li a{
   display: inline-block;
 }
 
+/* --- Footer Size --- */
+.footer-size {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+
+
 /* --- Carousel-items --- */
 .carousel-item>img {
   width: 100%;

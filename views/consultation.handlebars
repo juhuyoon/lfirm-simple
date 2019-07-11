@@ -50,39 +50,52 @@
 
 {{!-- Main body Content Wrapped in Carousel --}}
 <main>
-  <br><br><br><br>
+  <br><br><br><br><br>
   <div class="container">
-    <div class='row'>
-      <p>tel: +1 (404) 719-9824</p>
-      <p>yoolhyunlaw@gmail.com</p>
-    </div>
-    <div class="row">
-      <div class="col m10 offset-m1 s12">
-        <h2 class="center-align">For Consultation</h2>
-        <div class="row">
-          <form class="col s12" action='/consultation' method='post'>
-            <div class="row">
-              <div class='col s4'>First Name</div>
-              <div class="input-field col s8">
-                <input id="first_name" type="text" class="validate">
-              </div>
+    <div class="col m10 offset-m1 s12">
+      <h2 class="center-align">For Consultation</h2>
+      <div class="row">
+        <div class='col s12 center'>
+          <p class='consult'>tel: +1 (404) 719-9824</p>
+          <p class='consult'>yoolhyunlaw@gmail.com</p>
+        </div>
+      </div>
+      <div class="row">
+        <form class="col s12" action='/consultation' method='post'>
+          <div class="row">
+            <div class="divider"></div>
+            <div class='col s4 consult_table'> 성명 (First Name) </div>
+            <div class="input-field col s8 consult_box">
+              <input id="first_name" type="text" class="validate">
             </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="mdi-content-mail prefix"></i>
-                <input id="email" type="email" class="validate" required>
-                <label for="email">Email</label>
-              </div>
+          </div>
+          <div class="row">
+            <div class="divider"></div>
+            <div class='col s4 consult_table'>이메일 (Email) </div>
+            <div class="input-field col s8 consult_box">
+              <input id="email" type="email" class="validate" required>
             </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <textarea id="message" class="materialize-textarea"></textarea>
-                <label for="message">Message</label>
-              </div>
+          </div>
+          <div class="row">
+            <div class="divider"></div>
+            <div class='col s4 consult_table'>전화번호 (Phone Number) </div>
+            <div class="input-field col s8 consult_box">
+              <input id="phone" type="text" class="validate">
             </div>
-            <form action="#">
-              <div class="file-field input-field">
-                <div class="btn">
+          </div>
+          <div class="row">
+            <div class="divider"></div>
+            <div class='col s4 consult_table'>메세지 (Message)</div>
+            <div class="input-field col s8 consult_textarea">
+              <textarea id="message" class="materialize-textarea"></textarea>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='divider'></div>
+            <div class='col s4 consult_table'>첨부파일 (File)</div>
+            <form action="/email">
+              <div class="file-field input-field" id='files'>
+                <div class="btn submitBtn">
                   <span>File</span>
                   <input type="file" multiple>
                 </div>
@@ -91,16 +104,17 @@
                 </div>
               </div>
             </form>
-            <div class="row">
-              <div class="col m12">
-                <p class="right-align emailSubmit"><button class="btn btn-large waves-effect waves-light" type="button"
-                    name="action">Send Message</button></p>
-              </div>
+          </div>
+          <div class="row">
+            <div class="col m12">
+              <p class="right-align emailSubmit"><button class="btn btn-large waves-effect waves-light consultBtn" type="button"
+                  name="action">Send Message</button></p>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
   </div>
 </main>
 

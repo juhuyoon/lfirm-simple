@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const db = require('../../models/Comments');
+// const db = require('../../models/Comments');
 
 // This route renders the homepage
 router.get('/', (req, res) => {

@@ -54,32 +54,33 @@ app.set('view engine', 'handlebars');
 
 app.use(routes);
 
-app.post('/send', (req, res) => {
-  response = {
-    name: req.body.name,
-    email: req.body.email,
-    message: req.body.message
-  }
 
-  const mailOptions = {
-    from: req.body.name,
-    to: 'yoolhyunlaw@gmail.com',
-    subject: `Testing to see ${req.body.name}`,
-    text: req.body.message,
-    html: `Message from: ${req.body.name} Email: ${req.body.email} Message: ${req.body.message}`
-  };
+// app.post('/send', (req, res) => {
+//   response = {
+//     name: req.body.name,
+//     email: req.body.email,
+//     message: req.body.message
+//   }
 
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth
-  });
+//   const mailOptions = {
+//     from: req.body.name,
+//     to: 'yoolhyunlaw@gmail.com',
+//     subject: `Testing to see ${req.body.name}`,
+//     text: req.body.message,
+//     html: `Message from: ${req.body.name} Email: ${req.body.email} Message: ${req.body.message}`
+//   };
 
-  transporter.sendMail(mailOptions, (err, res) => {
-    if (err) {
-      return console.log(err);
-    } console.log(JSON.stringify(res));
-  });
-});
+//   const transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth
+//   });
+
+//   transporter.sendMail(mailOptions, (err, res) => {
+//     if (err) {
+//       return console.log(err);
+//     } console.log(JSON.stringify(res));
+//   });
+// });
 
 
 // listen on port 3000

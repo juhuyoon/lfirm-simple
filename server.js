@@ -14,13 +14,13 @@ const routes = require('./controllers/');
 const app = express();
 const allowedOrigins = ['http://localhost:3000'];
 
-const auth = {
-  type: 'oauth2',
-  user: 'yoolhyunlaw@gmail.com',
-  clientId: process.env.clientId,
-  clientSecret: process.env.clientSecret,
-  refreshToken: process.env.refreshToken
-};
+// const auth = {
+//   type: 'oauth2',
+//   user: 'yoolhyunlaw@gmail.com',
+//   clientId: process.env.clientId,
+//   clientSecret: process.env.clientSecret,
+//   refreshToken: process.env.refreshToken
+// };
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(cors({

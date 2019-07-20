@@ -14,6 +14,14 @@ const routes = require('./controllers/');
 const app = express();
 const allowedOrigins = ['http://localhost:3000'];
 
+const auth = {
+  type: 'oauth2',
+  user: 'yoolhyunlaw@gmail.com',
+  clientId: process.env.clientId,
+  clientSecret: process.env.clientSecret,
+  refreshToken: process.env.refreshToken
+};
+
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(cors({
 
@@ -46,30 +54,33 @@ app.set('view engine', 'handlebars');
 
 app.use(routes);
 
-// const transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: '',
-//     pass: ''
-//     // user: process.env.emailUser,
-//     // pass: process.env.emailPW
-//   }
-// });
+app.post('/send', (req, res) => {
+  response = {
+    name: req.body.name,
+    email: req.body.email,
+    message: req.body.message
+  }
 
-// const mailOptions = {
-//   from: process.env.emailUser,
-//   to: '',
-//   subject: 'Testing to receive',
-//   html: '<p>Some text here </p>'
-// };
+  const mailOptions = {
+    from: req.body.name,
+    to: 'yoolhyunlaw@gmail.com',
+    subject: `Testing to see ${req.body.name}`,
+    text: req.body.message,
+    html: `Message from: ${req.body.name} Email: ${req.body.email} Message: ${req.body.message}`
+  };
 
-// transporter.sendMail(mailOptions, (err, res) => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log(res);
-//   }
-// });
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth
+  });
+
+  transporter.sendMail(mailOptions, (err, res) => {
+    if (err) {
+      return console.log(err);
+    } console.log(JSON.stringify(res));
+  });
+});
+
 
 // listen on port 3000
 const PORT = process.env.PORT || 3000;

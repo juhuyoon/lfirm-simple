@@ -7,7 +7,7 @@ const AWS = require('aws-sdk');
 require('dotenv').config();
 
 // bring in the models
-const db = require('./models/');
+// const db = require('./models/');
 const routes = require('./controllers/');
 
 

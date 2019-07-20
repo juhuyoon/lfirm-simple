@@ -1,3 +1,3 @@
-module.exports = {
-  Comment: require('./Comments')
-};
+// module.exports = {
+//   Comment: require('./Comments')
+// };

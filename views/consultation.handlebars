@@ -54,6 +54,7 @@
   <div class="container">
     <div class="col m10 offset-m1 s12">
       <h2 class="center-align">For Consultation</h2>
+      {{msg}}
       <div class="row">
         <div class='col s12 center'>
           <p class='consult'>tel: +1 (404) 719-9824</p>
@@ -61,61 +62,63 @@
         </div>
       </div>
       <div class="row">
-        <form class="col s12" action='/consultation' method='post'>
-          <div class="row">
-            <div class="divider"></div>
-            <div class='col s4 consult_table'> 성명 (First Name) </div>
-            <div class="input-field col s8 consult_box">
-              <input id="first_name" type="text" class="validate">
-            </div>
-          </div>
-          <div class="row">
-            <div class="divider"></div>
-            <div class='col s4 consult_table'>이메일 (Email) </div>
-            <div class="input-field col s8 consult_box">
-              <input id="email" type="email" class="validate" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="divider"></div>
-            <div class='col s4 consult_table'>전화번호 (Phone Number) </div>
-            <div class="input-field col s8 consult_box">
-              <input id="phone" type="text" class="validate">
-            </div>
-          </div>
-          <div class="row">
-            <div class="divider"></div>
-            <div class='col s4 consult_table'>메세지 (Message)</div>
-            <div class="input-field col s8 consult_textarea">
-              <textarea id="message" class="materialize-textarea"></textarea>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='divider'></div>
-            <div class='col s4 consult_table'>첨부파일 (File)</div>
-            <form action="/email">
-              <div class="file-field input-field" id='files'>
-                <div class="btn submitBtn">
-                  <span>File</span>
-                  <input type="file" multiple>
-                </div>
-                <div class="file-path-wrapper">
-                  <input class="file-path validate" type="text" placeholder="Upload one or more files">
-                </div>
+        <form method="POST" action="/send">
+          <div class='input-field col s12'>
+            <div class='row'>
+              <div class='divider'></div>
+              <div class='col s4 consult_table'> 성명 (Name) </div>
+              <div class="input-field col s8 consult_box">
+                <input type='text' name='name' id='name'>
               </div>
-            </form>
-          </div>
-          <div class="row">
-            <div class="col m12">
-              <p class="right-align emailSubmit"><button class="btn btn-large waves-effect waves-light consultBtn" type="button"
-                  name="action">Send Message</button></p>
             </div>
-          </div>
+            <div class="row">
+              <div class='divider'></div>
+              <div class='col s4 consult_table'>이메일 (Email) </div>
+              <div class="input-field col s8 consult_box">
+                <input type="email" class="validate" name="email" id='email' required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+              <div class='col s4 consult_table'>전화번호 (Phone Number) </div>
+              <div class="input-field col s8 consult_box">
+                <input type="text" class="validate" name="phone" id='phone'>
+              </div>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+              <div class='col s4 consult_table'>메세지 (Message)</div>
+              <div class="input-field col s8 consult_textarea">
+                <textarea class="materialize-textarea" name='textarea' id='message'></textarea>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='divider'></div>
+              <div class='col s4 consult_table'>첨부파일 (File)</div>
+              <form action="/email">
+                <div class="file-field input-field" id='files'>
+                  <div class="btn submitBtn">
+                    <span>File</span>
+                    <input type="file" multiple>
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class='row'>
+              <div class='col m12'>
+                <p class="right-align emailSubmit">
+                  <button class='btn btn-large waves-effect waves-light consultBtn' type='submit'>Send Message</button>
+              </div>
+            </div>
         </form>
       </div>
     </div>
   </div>
   </div>
+  </form>
 </main>
 
 {{!-- Footer --}}

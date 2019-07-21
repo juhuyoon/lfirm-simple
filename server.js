@@ -1,8 +1,9 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
-const AWS = require('aws-sdk');
+const path = require('path');
 
 require('dotenv').config();
 
@@ -43,9 +44,10 @@ app.use(cors({
 }), express.static('public'));
 
 // Parse request body as JSON
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.engine('handlebars', exphbs({
   defaultLayout: 'main'
@@ -54,34 +56,30 @@ app.set('view engine', 'handlebars');
 
 app.use(routes);
 
-
-// app.post('/send', (req, res) => {
-//   response = {
-//     name: req.body.name,
-//     email: req.body.email,
-//     message: req.body.message
+// const transporter = nodemailer.createTransport({
+//   host: 'smtp.gmail.com',
+//   port: 465,
+//   secure: true,
+//   auth: {
+//     user:
+//     pass:
 //   }
-
-//   const mailOptions = {
-//     from: req.body.name,
-//     to: 'yoolhyunlaw@gmail.com',
-//     subject: `Testing to see ${req.body.name}`,
-//     text: req.body.message,
-//     html: `Message from: ${req.body.name} Email: ${req.body.email} Message: ${req.body.message}`
-//   };
-
-//   const transporter = nodemailer.createTransport({
-//     service: 'gmail',
-//     auth
-//   });
-
-//   transporter.sendMail(mailOptions, (err, res) => {
-//     if (err) {
-//       return console.log(err);
-//     } console.log(JSON.stringify(res));
-//   });
 // });
 
+// let mailOptions = {
+//   from:
+//   to: 'yoolhyunlaw@gmail.com',
+//   subject: 'Testing to see if email works',
+//   text: 'some measure of text'
+// };
+
+// transporter.sendMail(mailOptions, (err, data) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('email sent');
+//   }
+// });
 
 // listen on port 3000
 const PORT = process.env.PORT || 3000;

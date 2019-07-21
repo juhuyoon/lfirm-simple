@@ -1,4 +1,5 @@
 const router = require('express').Router();
+
 // const db = require('../../models/Comments');
 
 // This route renders the homepage
@@ -9,6 +10,13 @@ router.get('/', (req, res) => {
 // For consultation apge
 router.get('/consultation', (req, res) => {
   res.render('consultation');
+});
+
+router.post('/send', (req, res) => {
+  res.render('consultation', {
+    data: req.body
+  });
+  console.log(req.body);
 });
 
 // For Intro page

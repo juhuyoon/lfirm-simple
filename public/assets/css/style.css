@@ -76,12 +76,29 @@ main {
 /*
 * === IMAGES FOR ALL PAGES  ===
 */
-.overhead-image {
+
+.overhead-image-about {
   position: relative;
   margin-top: 3%;
   margin-bottom: auto;
   width: 100%;
-  height: 10em;
+  height: 22em;
+}
+
+.overhead-image-atl {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 20em;
+}
+
+.overhead-image-seoul {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 20em;
 }
 
 .overhead-image-contract {
@@ -89,7 +106,47 @@ main {
   margin-top: 3%;
   margin-bottom: auto;
   width: 100%;
-  height: 10em;
+  height: 20em;
+}
+
+.overhead-image-criminal {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 23em;
+}
+
+.overhead-image-family {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 25em;
+}
+
+.overhead-image-inheritance {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 25em;
+}
+
+.overhead-image-intro {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 20em;
+}
+
+.overhead-image-taxes {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 20em;
 }
 
 .overhead-image-resources {
@@ -97,13 +154,14 @@ main {
   margin-top: 3%;
   margin-bottom: auto;
   width: 100%;
-  height: 10em;
+  height: 18em;
 }
 
-.profile-image {
+.profile-image-about {
   margin-top: -30%;
   width: 100%;
   height: 100%;
+  margin-top: 20%;
 }
 
 .profile-image2 {
@@ -111,6 +169,17 @@ main {
   height: 100%;
 }
     
+
+
+/*
+Seoul Page Content
+*/
+
+#seoul-link {
+  font-size: 1.5em;
+  text-align: center;
+  display: block;
+}
 /* 
 * === MAIN CONTENT TEXT === 
 */

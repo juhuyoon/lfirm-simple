@@ -158,15 +158,16 @@ main {
 }
 
 .profile-image-about {
-  margin-top: -30%;
   width: 100%;
   height: 100%;
   margin-top: 20%;
 }
 
-.profile-image2 {
+.profile-image-intro {
   width: 100%;
   height: 100%;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
     
 

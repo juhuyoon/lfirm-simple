@@ -1,5 +1,7 @@
 /* eslint-disable no-undef */
 $(document).ready(() => {
+  $('.sidenav').sidenav();
+        
   // $('.emailSubmit').on('submit', (event) => {
   //   event.preventDefault();
 
@@ -29,16 +31,6 @@ $(document).ready(() => {
   $('.carousel').carousel({ fullWidth: true }).css('height', $(window).height());
   autoplay();
 
-  // for (let i = 0; i < coll.length; i += 1) {
-  //   coll[i].addEventListener('click', () => {
-  //     this.classList.toggle('active');
-  //     const content = this.nextElementSibling;
-  //     if (content.style.maxHeight) {
-  //       content.style.maxHeight = null;
-  //     } else {
-  //       content.style.maxHeight = `${content.scrollHeight}px`;
-  //     }
-  //   });
-  // }
+
   $('.collapsible').collapsible();
 });

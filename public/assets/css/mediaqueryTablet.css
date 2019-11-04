@@ -1,9 +1,10 @@
-/* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    /* 
+/* ----------- Galaxy Tab 2 ----------- */
+
+/* Portrait and Landscape */
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px) {
+/* 
 * === NAVBAR PROPERTIES ===
 */
 .navbar-fixed{
@@ -324,13 +325,356 @@ Seoul Page Content
 
 }
 
-/* ----------- Retina Screens ----------- */
+/* ----------- Galaxy Tab S ----------- */
+
+/* Portrait and Landscape */
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+/* 
+* === NAVBAR PROPERTIES ===
+*/
+.navbar-fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #BEBEBE;
+}
+
+.nav-space {
+  margin-top: -1em;
+  margin-bottom: -2em;
+}
+
+nav ul li a{
+  color: white;
+}  
+
+.logo{
+  margin: 10px 10px 10px 15px;
+   background: red;
+   padding: 5px;
+   background: linear-gradient(red, yellow, green);
+   width: 60px;
+   height: 25px;
+   color: white;
+}
+.navbar-right{
+  position: fixed;
+  right: 5px; /*pixels away from the right of the navbar*/
+}
+.title{
+  display: inline-block;
+}
+
+/* --- Footer Size --- */
+.footer-size {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+
+
+/* --- Carousel-items --- */
+.carousel-item>img {
+  width: 100%;
+  height:100%;
+}
+
+.textLand {
+  margin-top: 20%;
+  margin-bottom: 20%;
+  font-size: 2em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+}
+
+/* 
+* === STICKY FOOTER SETUP ===
+*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Apple SD Gothic Neo', 'NanumBarunGothic', 'Malgun Gothic', dotum, 'Lucida Grande', sans-serif;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/*
+* === IMAGES FOR ALL PAGES  ===
+*/
+
+.overhead-image-about {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 22em;
+}
+
+.overhead-image-atl {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 20em;
+}
+
+.overhead-image-seoul {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 20em;
+}
+
+.overhead-image-contract {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 20em;
+}
+
+.overhead-image-criminal {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 23em;
+}
+
+.overhead-image-family {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 25em;
+}
+
+.overhead-image-inheritance {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 25em;
+}
+
+.overhead-image-intro {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 20em;
+}
+
+.overhead-image-taxes {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 20em;
+}
+
+.overhead-image-resources {
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  width: 100%;
+  height: 18em;
+}
+
+.profile-image-about {
+  width: 100%;
+  height: 100%;
+  margin-top: 20%;
+}
+
+.profile-image-intro {
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+    
+/*
+Seoul Page Content
+*/
+
+#seoul-link {
+  font-size: 1.5em;
+  text-align: center;
+  display: block;
+}
+/* 
+* === MAIN CONTENT TEXT === 
+*/
+
+.main-content {
+  max-width: 85%;
+  margin: auto;
+}
+
+.main-text {
+  font-size: 1.3em;
+  line-height: 2em;
+  margin-bottom: 2em;
+}
+
+.main-text-seoul {
+  font-size: 1.3em;
+  line-height: 2em;
+  margin-bottom: 0.3em;
+}
+
+.resume-text {
+  font-size: 1.1em;
+  line-height: 2em;
+  margin-bottom: 2em;
+}
+
+/* 
+* === RESOURCES PAGES === 
+*/
+.card {
+  width: 100%;
+}
+
+#dropdown-resources{
+  width: 100%;
+}
+
+/* 
+* -- Style the button that is used to open and close the collapsible content --
+*/
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* 
+* -- Add a background color to the button -- 
+*/
+.collapsible:hover {
+  background-color: rgb(145, 155, 164);
+}
+
+/* 
+* -- Resources Paragraph Content -- 
+*/
+.resources-p {
+  padding: 0.5em;
+  line-height: 1.6;
+}
+
+.resources-tab {
+  padding-left: 1.5em;
+  line-height: 1.6
+}
+
+
+/* 
+* -- Consultation Content -- 
+*/
+
+.consult {
+  font-size: 1.5em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+}
+
+.consult_table {
+  margin-top: 5%;
+  font-size: 1.2em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+}
+
+.consult_box {
+  margin-top: 3%;
+  width: 100%;
+  box-sizing: border-box;
+  height: 60px;
+  border: 2px solid #999;
+  padding: 0 1%;
+  font-size: 15px;
+  color: black;
+  font-family: notokr-regular,Noto Sans CJK KR DemiLight;
+}
+
+.consult_textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #999;
+  font-size: 15px;
+  color: black;
+  font-family: notokr-regular,Noto Sans CJK KR DemiLight;
+}
+
+.submitBtn {
+  background-color: white;
+  color: black;
+}
+
+.submitBtn:hover {
+  background-color: #BEBEBE;
+}
+
+#files {
+  margin-top: 3%
+}
+
+.consultBtn {
+  background-color: #999;
+}
+
+.consultBtn:hover {
+  background-color: #BEBEBE;
+}
+
+}
+
+
+
+
+/* ----------- Nexus 7 ----------- */
+
+/* Portrait and Landscape */
 @media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    /* 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) {
+
+}
+
+
+/* ----------- Nexus 9 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 1536px) 
+  and (device-height: 2048px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) {
+/* 
 * === NAVBAR PROPERTIES ===
 */
 .navbar-fixed{
@@ -648,5 +992,4 @@ Seoul Page Content
 .consultBtn:hover {
   background-color: #BEBEBE;
 }
-
 }

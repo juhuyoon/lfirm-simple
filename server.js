@@ -7,8 +7,6 @@ const path = require('path');
 
 require('dotenv').config();
 
-// bring in the models
-// const db = require('./models/');
 const routes = require('./controllers/');
 
 
@@ -25,7 +23,6 @@ const allowedOrigins = ['http://localhost:3000'];
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(cors({
-
   origin(origin, callback) {
     // allow requests with no origin
     // (like mobile apps or curl requests)
@@ -56,30 +53,40 @@ app.set('view engine', 'handlebars');
 
 app.use(routes);
 
-// const transporter = nodemailer.createTransport({
-//   host: 'smtp.gmail.com',
-//   port: 465,
-//   secure: true,
-//   auth: {
-//     user:
-//     pass:
-//   }
-// });
 
-// let mailOptions = {
-//   from:
-//   to: 'yoolhyunlaw@gmail.com',
-//   subject: 'Testing to see if email works',
-//   text: 'some measure of text'
-// };
-
-// transporter.sendMail(mailOptions, (err, data) => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log('email sent');
-//   }
-// });
+app.post('/send', (req, res) => {
+var transport = nodemailer.createTransport({
+    host: "smtp.mailtrap.io",
+    port: 2525,
+    auth: {
+      user: '327159d31d55a0',
+      pass: 'e6568ee0aa2b50'
+    },
+    debug: true,
+    logger: true
+  });
+var mailOptions = {
+  from: req.body.email,
+  to: 'user@example.com, user2@example.com',
+  subject: `${req.body.name}, ${req.body.phone}` ,
+  text: req.body.name + req.body.email + req.body.phone + req.body.textarea
+  // attachments: [
+  //   {
+  //     filename: 'text.txt',
+  //     content: 'new important notes',
+  //     contentType: 'text/plain',
+  //     path: 'text.txt'
+  //   }
+  // ]
+};
+  transport.sendMail(mailOptions, function(err, res) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(`Message sent: %s`, res.messageId);
+    }
+  });
+});
 
 // listen on port 3000
 const PORT = process.env.PORT || 3000;
